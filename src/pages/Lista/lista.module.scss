@@ -48,14 +48,14 @@
   &__bottom {
 
     &__tasks {
+      width: 90%;
       display: flex;
       align-items: center;
-      gap: 1rem;
       margin-left: 2rem;
 
       &__container {
 
-        width: 90%;
+        width: 100%;
         padding: 1.4rem;
 
         display: flex;
@@ -90,9 +90,22 @@
 
           &:hover {
             filter: brightness(0.9);
+            cursor: pointer;
           }
         }
 
+      }
+
+      button {
+        width: 2.8rem;
+        height: 2.8rem;
+        border-radius: 0.4rem;
+        border: none;
+
+        &:hover {
+          filter: brightness(0.9);
+          cursor: pointer;
+        }
       }
     }
 

@@ -1,4 +1,4 @@
-import { faCheck, faEdit } from '@fortawesome/free-solid-svg-icons';
+import { faCheck, faEdit, faTrash } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { useEffect, useState } from 'react';
 import { Button } from '../../components/Button';
@@ -95,6 +95,10 @@ export function Lista() {
               />
               <span>{task.title}</span>
             </div>
+            <button
+              onClick={() => handleRemoveTasks(task)}
+              children={<FontAwesomeIcon icon={faTrash} color="red" />}
+            />
           </div>
         )) : (
           <div className={style.viewList__bottom__notfound}>
