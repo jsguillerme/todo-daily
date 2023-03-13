@@ -52,6 +52,19 @@ export function Lista() {
     setTasks(tasks.map(task => (task.id === taskAtual.id ? { ...task, isFinished: !task.isFinished } : task)));
   }
 
+  function handleRemoveTasks(taskAtual: TaskProps) {
+    if (window.confirm('Certeza que você deseja remover essa atividade?')) {
+
+      if((tasks.filter(task => task.id!== taskAtual.id)).length > 0) {
+        setTasks(tasks.filter(task => task.id!== taskAtual.id));
+      } else {
+        localStorage.removeItem('listTasks');     
+        setTasks([]);
+      }
+    }
+  }
+  
+
   return (
     <div className={style.viewList}>
       <div className={style.viewList__top}>
