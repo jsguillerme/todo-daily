@@ -21,7 +21,7 @@ export function Home() {
         <p>Daily</p>
       </div>
       <p></p>
-      <Button children="Iniciar Lista" onClick={redirectToList}/>
+      <Button children=" Iniciar Lista" onClick={redirectToList}/>
     </div>
   );
 }
